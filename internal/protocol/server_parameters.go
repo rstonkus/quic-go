@@ -131,3 +131,7 @@ const NumCachedCertificates = 128
 // 1. it reduces the framing overhead
 // 2. it reduces the head-of-line blocking, when a packet is lost
 const MinStreamFrameSize ByteCount = 128
+
+// MinPacingDelay is the minimum delay for send pacing.
+// If the next packet is scheduled to be sent earlier than this delay, it will be sent immediately.
+const MinPacingDelay = 500 * time.Microsecond
